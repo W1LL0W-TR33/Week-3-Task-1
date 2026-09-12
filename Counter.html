@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Counter</title>
+  <style>
+    body {
+      margin: 20px;
+      font-family: sans-serif;
+    }
+    #count {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    .button-group button {
+      font-size: 16px;
+      padding: 4px 10px;
+      margin-right: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="count">0</div>
+
+  <div class="button-group">
+    <button onclick="increase()">+1</button>
+    <button onclick="decrease()">-1</button>
+    <button onclick="reset()">Reset</button>
+  </div>
+
+  <script>
+    let counter = 0;
+    const countDisplay = document.getElementById("count");
+
+    function updateDisplay() {
+      countDisplay.textContent = counter;
+    }
+
+    function increase() {
+      counter++;
+      updateDisplay();
+    }
+
+    function decrease() {
+      counter--;
+      updateDisplay();
+    }
+
+    function reset() {
+      counter = 0;
+      updateDisplay();
+    }
+  </script>
+
+</body>
+</html>
